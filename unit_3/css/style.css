@@ -1,0 +1,9 @@
+body {
+	text-align: center;
+	font-family: Avenir, sans-serif;
+	background-color: thistle;
+}
+
+h1, p {
+	color: crimson
+}
