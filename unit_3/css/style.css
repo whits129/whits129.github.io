@@ -1,9 +1,27 @@
+
+@keyframes example {
+	from {background-color: #FCAE8E;}
+	to {background-color: white;}
+
+
+}
 body {
 	text-align: center;
 	font-family: Avenir, sans-serif;
-	background-color: thistle;
+	background-color: white;
+	animation-name: example;
+    animation-duration: 2s;
 }
 
-h1, p {
+h1, h4, p {
 	color: crimson
+}
+
+h4 {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+#slogan {
+	font-style: italic;
 }
