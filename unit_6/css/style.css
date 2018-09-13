@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Kosugi+Maru|Merriweather);
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@keyframes example {
+	from {
+		background-color: #FCAE8E;
+	}
+	to {
+		background-color: white;
+	}
+}
+body {
+	text-align: center;
+	background-color: white;
+	animation-name: example;
+	animation-duration: 2s;
+}
+h1 {
+	color: black;
+	font-family: 'Merriweather';
+}
+h4 {
+	font-family: 'Kosugi Maru';
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+p{
+	color: white;
+	font-family: 'Kosugi Maru';
+	padding: 3px;
+}
+header {
+	padding: 20px;
+}
+#slogan {
+	font-style: italic;
+	padding: 20px;
+	color: black;
+
+}
+nav {
+	padding: 20px;
+}
+a {
+	font-family: 'Kosugi Maru';
+	text-decoration: none;
+	color: lightgray;
+	text-transform: uppercase;
+	display: block;
+	padding: 3px;
+
+}
+a:hover {
+	color: #E89C6C;
+}
+img {
+	display: block;
+	width: 100%;
+}
+#two_column {
+	border: 1px black solid;
+	padding: 20px;
+}
+#left {
+	background-color: red;
+	border: 1px black solid;
+	padding: 20px;
+	float: left;
+	width: 50%;
+}
+#right {
+	background-color: lightgray;
+	border: 1px black solid;
+	padding: 20px;
+	float: right;
+	width: 50%;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+#Futurebot {
+	background-color: #77BA4A;
+}
+#Changemakers {
+	background-color: lightgray;
+}
+#Campfire {
+	background-color: black;
+}
+#Flags {
+	background-color: #ededee;
+}
+#Chadburn {
+	background-color: white;
+}
+#Pillars {
+	background-color: #d7db63;
+}
+#Wild {
+	background-color: #7f1742;
+}
+figure {
+	background-color: #E89C6C;
+	padding: 20px 100px;
+}
+figcaption {
+	padding: 20px;
+}
+
+footer {
+	background-color: #FF957E;
+    padding: 20px;
+}
+@media (max-width: 1024px){
+	section{-webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;}
+}
+
