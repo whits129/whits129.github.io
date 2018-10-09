@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Kosugi+Maru|Merriweather);
 
-
+@font-face { 
+	font-family: "DrukWide-Bold"; 
+	src: url("file:///Users/wsmith/Documents/GitHub/whits129.github.io/unit_8/fonts/DrukWide-Bold.woff") format("woff"); 
+}
 
 * {
 	margin: 0;
@@ -9,53 +12,72 @@
 }
 @keyframes example {
 	from {
-		background-color: #FCAE8E;
+		background-color: white;
 	}
 	to {
 		background-color: white;
 	}
 }
 body {
-	text-align: center;
-	background-color: white;
+	text-align: left;
 	animation-name: example;
 	animation-duration: 2s;
+	padding-left: 310px;
 }
 h1 {
 	color: black;
-	font-family: 'Merriweather';
+	font-family: "DrukWide-Bold";
+	text-transform: uppercase; 
 }
 h4 {
-	font-family: 'Kosugi Maru';
+	font-family: 'DrukWide-Bold';
 	color: black;
-	text-transform: uppercase;
 	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 p{
 	color: white;
-	font-family: 'Kosugi Maru';
+	font-family: Helvetica;
 	padding: 3px;
 }
 header {
-	padding: 20px;
+	/*padding: 20px;*/
+}
+#menu_button{
+	display:none;
+
 }
 #slogan {
-	font-style: italic;
-	padding: 20px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 	color: black;
 
 }
 nav {
 	padding: 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: rgb(250,250,250);
+	text-align: left;
+	width: 320px;
+	min-height: 100vh
+}
+#navlinks {
+	padding-bottom: 100px;
 }
 a {
-	font-family: 'Kosugi Maru';
+	font-family: Helvetica;
+	font-size: 10pt;
 	text-decoration: none;
 	color: lightgray;
-	text-transform: uppercase;
 	display: block;
 	padding: 3px;
 
+}
+#contact{
+	position: fixed;
 }
 a:hover {
 	color: #E89C6C;
@@ -77,25 +99,25 @@ img {
 	background-color: #77BA4A;
 }
 #Changemakers {
-	background-color: lightgray;
+	background-color: ;
 }
 #Campfire {
-	background-color: black;
+	background-color: ;
 }
 #Flags {
-	background-color: #ededee;
+	background-color: ;
 }
 #Chadburn {
 	background-color: white;
 }
 #Pillars {
-	background-color: #d7db63;
+	background-color: ;
 }
 #Wild {
-	background-color: #7f1742;
+	background-color: ;
 }
 figure {
-	background-color: #E89C6C;
+	background-color: ;
 	padding: 5% 20%;
 	position: relative;
 	overflow: hidden;
@@ -126,13 +148,24 @@ figcaption div {
 }
 
 footer {
-	background-color: #FF957E;
     padding: 20px;
 }
 @media (max-width: 600px){
-	h4,p, {
+	h4,p {
 		font-size: .75em;
 	}
-	
+	#menu_button {
+		display:block;
+	}
+	nav{
+		transform: translateX(-310px);
+		transition: transform 500ms;
+	}
+	body{
+		padding-left: 0;
+	}
+	nav.active {
+		transform:translateX(0);
+	}
 }
 
