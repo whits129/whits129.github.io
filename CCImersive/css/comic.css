@@ -1,0 +1,80 @@
+body{
+  background: black; 
+}
+
+#canvas{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+
+}
+
+.panel {
+  width: 250px;
+  height: 350px;
+  border-right: 10px solid black;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  border-left: 10px solid black;
+  float: left;
+}
+
+#panel1{
+  background: red;
+  animation: panel1 .2s ease .2s infinite alternate;
+  transform: skew(30deg,20deg);
+}
+
+#panel2{
+  background: purple;
+  animation: panel2 .2s ease .2s infinite alternate;
+  transform: skew(-10deg,40deg);
+}
+
+#panel3{
+  background: blue;
+  animation: panel3 .2s ease .2s infinite alternate;
+  transform: skew(-20deg,-30deg);
+}
+
+#circle{
+  background: red;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes panel1 {
+  0% {
+    background: red;
+    left: 10%;
+  }
+
+  100% {
+    background: purple;
+    left: 90%;
+  }
+}
+
+@keyframes panel2 {
+  40% {
+    background: purple;
+
+  }
+  100% {
+    background: blue;
+
+  }
+}
+
+@keyframes panel3 {
+  60% {
+    background: blue;
+    left: 10%;
+  }
+
+  100% {
+    background: red;
+    left: 90%;
+  }
+}
