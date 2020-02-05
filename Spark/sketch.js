@@ -113,24 +113,26 @@ function drawKeypoints() {
     if (noses === 0) {
         background (86, 50, 168);
         // background(50, 1, 77);
-        textSize(36);
+        textSize(24);
         fill(255);
         textAlign(CENTER);
-        text('Grab a partner and move toward each other.', width, (height / 2) - 50);
-        text('What happens when you get close?', width / 3.4, height / 2);
+        text('Grab a partner and move toward each other.', width / 2, (height / 2) - 50);
+        text('What happens when you get close?', width / 2, height / 2.05);
         // push();
         // stroke(255);
         // strokeWeight(3);
         // line(675, windowHeight/1.7, 1200, windowHeight/1.7);
         // pop();
         // ellipse(a, windowHeight/1.5, 50)
-        image(img, a, windowHeight/1.8, img.width / 8, img.height / 8);
-        // ellipse(b, windowHeight/1.5, 50)
-        image(img, b, windowHeight/1.8, img.width / 8, img.height / 8);
-        counta += 1;
-        a=(height/1.65)+(sin(counta/15)*100);
-        countb += 1;
-        b=(height/1.12)+(-sin(countb/15)*100);
+
+        //faces moving back and forth>>
+        // image(img, a, windowHeight/1.8, img.width / 8, img.height / 8);
+        // // ellipse(b, windowHeight/1.5, 50)
+        // image(img, b, windowHeight/1.8, img.width / 8, img.height / 8);
+        // counta += 1;
+        // a=(height/1.65)+(sin(counta/15)*100);
+        // countb += 1;
+        // b=(height/1.12)+(-sin(countb/15)*100);
 
 
 
@@ -138,11 +140,11 @@ function drawKeypoints() {
     } else if (noses === 1) {
         detectionBuffer = 0;
         background(86, 50, 168, 50);
-        textSize(36);
+        textSize(24);
         fill(255);
         textAlign(CENTER);
-        text('Grab a partner and move toward each other.', width / 3.1, (height / 2) - 50);
-        text('What happens when you get close?', width / 3.4, height / 2);
+        text('Grab a partner and move toward each other.', width / 2, (height / 2) - 50);
+        text('What happens when you get close?', width / 2, height / 2.05);
 
     }
 
