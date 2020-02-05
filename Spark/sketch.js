@@ -115,6 +115,7 @@ function drawKeypoints() {
         // background(50, 1, 77);
         textSize(36);
         fill(255);
+        textAlign(CENTER);
         text('Grab a partner and move toward each other.', width / 3.1, (height / 2) - 50);
         text('What happens when you get close?', width / 3.4, height / 2);
         // push();
@@ -139,8 +140,9 @@ function drawKeypoints() {
         background(86, 50, 168, 50);
         textSize(36);
         fill(255);
-        text('Grab a partner and move along the line.', width / 3.1, (height / 2) - 50);
-        text('What happens when you move closer together?', width / 3.4, height / 2);
+        textAlign(CENTER);
+        text('Grab a partner and move toward each other.', width / 3.1, (height / 2) - 50);
+        text('What happens when you get close?', width / 3.4, height / 2);
 
     }
 
