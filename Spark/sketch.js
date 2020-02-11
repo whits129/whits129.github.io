@@ -18,6 +18,10 @@ var a;
 counta = 0;
 var b;
 countb = 0
+//variables for background gradient
+const Y_AXIS = 1;
+const X_AXIS = 2;
+let b1, b2, c1, c2;
 // const Y_AXIS = 1;
 // const X_AXIS = 2;
 // let b1, b2, c1, c2;
@@ -33,6 +37,8 @@ function setup() {
     img2 = loadImage('assets/hearteyes.png');
     // img3 = loadImage('assets/cryng.png');
     song = loadSound('assets/glitter_02.wav');
+    b1 = color(86, 50, 168);
+    b2 = color(200, 100, 200);
     // song2 = loadSound('assets/ambient2.wav');
     // b1 = color(255);
     // b2 = color(0);
@@ -64,6 +70,7 @@ function setup() {
 
 function draw() {
 
+  // setGradient(0, 0, width, height, b1, b2, Y_AXIS);
 
     if (poses) drawKeypoints();
     system.run();
@@ -114,10 +121,11 @@ function drawKeypoints() {
         background (86, 50, 168);
         // background(50, 1, 77);
         textSize(24);
-        fill(255);
+        fill(255,255,255,50);
         textAlign(CENTER);
         text('Grab a partner and move toward each other.', width / 2, (height / 2) - 50);
         text('What happens when you get close?', width / 2, height / 2.05);
+
         // push();
         // stroke(255);
         // strokeWeight(3);
@@ -141,10 +149,11 @@ function drawKeypoints() {
         detectionBuffer = 0;
         background(86, 50, 168, 50);
         textSize(24);
-        fill(255);
+        fill(255,255,255,50);
         textAlign(CENTER);
         text('Grab a partner and move toward each other.', width / 2, (height / 2) - 50);
         text('What happens when you get close?', width / 2, height / 2.05);
+
 
     }
 
@@ -332,3 +341,26 @@ ParticleSystem.prototype.setOrigin = function(newOrigin) {
 //     }
 //   }
 // }
+
+
+function setGradient(x, y, w, h, c1, c2, axis) {
+  noFill();
+
+  if (axis === Y_AXIS) {
+    // Top to bottom gradient
+    for (let i = y; i <= y + h; i++) {
+      let inter = map(i, y, y + h, 0, 1);
+      let c = lerpColor(c1, c2, inter);
+      stroke(c);
+      line(x, i, x + w, i);
+    }
+  } else if (axis === X_AXIS) {
+    // Left to right gradient
+    for (let i = x; i <= x + w; i++) {
+      let inter = map(i, x, x + w, 0, 1);
+      let c = lerpColor(c1, c2, inter);
+      stroke(c);
+      line(i, y, i, y + h);
+    }
+  }
+}
